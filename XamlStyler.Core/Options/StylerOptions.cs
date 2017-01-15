@@ -71,7 +71,7 @@ namespace Xavalon.XamlStyler.Core.Options
         [DisplayName("Keep first attribute on same line")]
         [JsonProperty("KeepFirstAttributeOnSameLine", DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         [Description("Defines whether the first line of attribute(s) should appear on the same line as the element's start tag.\r\n\r\nDefault Value: false")]
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool KeepFirstAttributeOnSameLine { get; set; }
 
         [Category("Attribute Formatting")]
@@ -237,7 +237,7 @@ namespace Xavalon.XamlStyler.Core.Options
         [DisplayName("Keep markup extensions of these types on one line")]
         [JsonProperty("NoNewLineMarkupExtensions", DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         [Description("Defines a comma-separated list of Markup Extensions that are always kept on a single line\r\n\r\nDefault Value: x:Bind, Binding")]
-        [DefaultValue("x:Bind, Binding")]
+        [DefaultValue("")]
         public string NoNewLineMarkupExtensions { get; set; }
 
         // Thickness formatting
@@ -245,7 +245,7 @@ namespace Xavalon.XamlStyler.Core.Options
         [DisplayName("Thickness separator")]
         [JsonProperty("ThicknessSeparator", DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         [Description("Defines how thickness attributes (i.e., margin, padding, etc.) should be formatted.\r\n\r\nDefault Value: Comma")]
-        [DefaultValue(ThicknessStyle.Comma)]
+        [DefaultValue(ThicknessStyle.Space)]
         public ThicknessStyle ThicknessStyle { get; set; }
 
         [Category("Thickness formatting")]
@@ -260,7 +260,7 @@ namespace Xavalon.XamlStyler.Core.Options
         [DisplayName("Format XAML on save")]
         [JsonProperty("FormatOnSave", DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         [Description("Defines whether to automatically format the active XAML document while saving.\r\n\r\nDefault Value: false")]
-        [DefaultValue(true)]
+        [DefaultValue(false)]
         public bool BeautifyOnSave { get; set; }
 
         [Category("Misc")]
